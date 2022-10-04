@@ -1,6 +1,6 @@
 # README
 
-Hey-Bill its a ruby console application to calculate taxes in a product list
+Hey-Bill it's a ruby console application to calculate taxes in a product list
 
 * Basics:
     * Ruby version: 2.7.6
@@ -11,7 +11,7 @@ Hey-Bill its a ruby console application to calculate taxes in a product list
     -rake
 
 * Folder Structure
-    * database: all related with the database 
+    * database: all related to the database 
     * lib: to place all logic of the business 
     * spec: to place unit test and integration tests
 
@@ -33,17 +33,17 @@ Hey-Bill its a ruby console application to calculate taxes in a product list
 
 
 * Rules:
-    1. When the program ask for input you must type "#" at the end of your input and press enter.
+    1. When the program asks for the input you must type "#" at the end of your input and press enter.
 
-    2. The program expects a list of products and every item must be separated by line break.
+    2. The program expects a list of products and every item must be separated by a line break.
 
     3. The input is validated by the following regular expression `/^(\d)((\s*\w*\s)*)(\d+\.\d+)$/` so be careful to follow the pattern, otherwise the program will show you which line isn't matching and will stop.
 
  
 * Database creation:
-There is file called "tax_exceptions.txt" where you can add products to except from taxes (books, medical products, food and more). Within this file you will find an string separated by comma.
+There is a file called "tax_exceptions.txt" where you can add products except for taxes (books, medical products, food and more). Within this file, you will find a string separated by commas.
 
-    **This program will work even without .txt file, by using a hard-coded array with the following elements:**
+    **This program will work even without a .txt file, by using a hard-coded array with the following elements:**
 
     > book,chocolate bar,box of chocolates,packet of headache pills,boxes of chocolates
     - To add a product you have to place a comma followed by the product name.
@@ -61,13 +61,13 @@ There is file called "tax_exceptions.txt" where you can add products to except f
 
 * How to run the test suite?
 
-    To run unit test cases and integration cases just run on console:
+    To run unit test cases and integration cases just run on the console:
 
     `rake specs`
 
 
 ## IMPORTANT
-There are 2 use of cases on the integration module which reflect erros.
+There are 2 use cases on the integration module which reflect errors.
 
 ### Case 2
 
@@ -97,8 +97,8 @@ Total: 65.15                        <-Difference here
 
 Doing calculations by hand:
 
-Both products are imported, so both of them needs for import duty tax calculation.
-The first one is food, so it doesn't apply for basic taxes calculations
+Both products are imported, so both of them need import duty tax calculation.
+The first one is food, so it doesn't apply to basic taxes calculations
 
 The expected result for product #2 has a miscalculation  
 - (47.50 * 0.15) + 47.50 = 54.625 not 54.65
@@ -137,9 +137,9 @@ Total: 98.38                        <-Difference here
 
 Doing calculations by hand:
 
-The last product is imported and it's food, so its excented of basic taxes but not from import duty
+The last product is imported and it's food, so it's excepted of basic taxes but not from import duty
 
-The expected result for product #4 has a miscalculation and different product name
+The expected result for product #4 has a miscalculation and a different product name
 - 3 * 11.25    = 33.75 
 - 33.75 * 0.05 = 1.68
 - Total = 33.75 + 1.68 = 35.43 not 35.55
